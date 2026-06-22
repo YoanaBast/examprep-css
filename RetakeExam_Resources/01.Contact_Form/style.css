@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 2em;
+    background: #f6f6f6;
+    box-sizing: border-box;
+    /* no flex needed */
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 0.9em;
+    font-family: "Source Sans 3", sans-serif;
+    flex-wrap: wrap;
+    max-width: 60em;
+    margin: 0 auto;
+    align-items: flex-start;
+    width: fit-content;
+    max-width: 50em;
+    margin-top: 5em;
+}
+
+
+input, textarea, select, button {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+
+.columns {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    justify-content: space-between;
+}
+
+h2 {
+    text-transform: uppercase;
+    color: #585858;
+    font-size: 1.1rem;
+    letter-spacing: 0.2em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+@media (min-width: 950px) {
+    form {
+        min-width: 30em;
+    }
+}
+
+.form-content{
+    color: #757575;
+    display: flex;
+    gap: 1.2em;
+    flex-wrap: wrap;
+
+}
+
+.form-content > input:not(.submit-button),
+.form-content > textarea {
+    flex: 1 1 200px;   /* grow/shrink, with a sensible base width */
+    min-width: 0;       /* critical: prevents flex items from overflowing their container */
+}
+
+
+.form-content > input {
+    border: none;
+    border-bottom: 1px solid #c2c2c2;
+    background: none;
+
+}
+
+.form-content > textarea {
+    border: none;
+    border-bottom: 1px solid #c2c2c2;
+    height: 1.8em;
+    width: 100%;
+    background: none;
+
+}
+
+.form-content > input.submit-button {
+    border: none;
+    background: #585858;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.5em;
+    padding: 1em 1.5em;
+    border-radius: 2px;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+}
+
+.awesome-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    align-items: flex-start;
+}
+
+.awesome-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5em;
+    height: 2.5em;
+    border: 1px solid #c9c9c9;
+    border-radius: 5%;
+    color: #585858;
+    text-decoration: none;
+}
+
+.awesome-icons a:hover {
+    border-color: black;
+}
+
+@media (min-width: 950px) {
+    .awesome-icons {
+        max-width: 14em;
+    }
+}
+
+.form-content > input,
+.form-content > textarea {
+    border: none;
+    border-bottom: 1px solid #c2c2c2;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+
+.form-content > input:focus,
+.form-content > textarea:focus {
+    border-bottom-color: transparent;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    outline: none;
+}
+
+footer {
+    display: flex;
+    gap: 1em;
+    margin: 0;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: flex-start;
+    color: #585858;
+    font-size: 0.7em;
+    padding: 0em;
+}
+
+.columns:has(footer) .card {
+    padding-top: 0em;
+}
