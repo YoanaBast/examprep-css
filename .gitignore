@@ -1,0 +1,17 @@
+# IDE
+.idea/
+.vscode/
+
+# Cache
+__pycache__/
+*.pyc
+.cache/
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+.npm/
+
+# Logs
+*.log
