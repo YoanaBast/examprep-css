@@ -1,0 +1,138 @@
+html, body {
+    background: #eeeeee;
+    margin: 0;
+    height: 100%;
+    color: #ffffff;
+    font-family: "Open Sans"
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 16px;
+  box-sizing: border-box; /* prevents padding from adding extra width */
+
+}
+
+.main-container {
+    display: flex;
+    max-width: 60em;
+
+}
+
+
+.image-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  url('image/cover.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: 15em;
+  min-height: 25em;
+  padding: 1em;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 5px 0 0 5px; /* top-left top-right bottom-right bottom-left */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+}
+
+.image-container h1, h2 {
+    font-weight: 300;
+}
+
+h3 {
+    font-size: 1em;
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0em;
+}
+
+h1, h2 {
+    margin: 0em;
+
+}
+.icons {
+    display: flex;
+    justify-content: center;
+}
+
+i {
+  font-size: 1.2em;
+  color: white;
+  border-radius: 50%;
+  padding: 0.5em;
+  width: 1em;
+  height: 1em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icons a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+.form-container {
+    background: #ffffff;
+    padding: 3em;
+    border-radius: 0 5px 5px 0; /* top-left top-right bottom-right bottom-left */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+
+}
+
+
+.form-container form{
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    border: none;
+    border-bottom: 2px solid #cccccc;
+    background: transparent;
+    min-width: 20em;
+}
+
+label {
+    color: #ccccd0;
+    font-size: 0.8em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+
+}
+
+
+input::placeholder {
+    color: #999999;
+}
+.options {
+    margin-top: 2em;
+}
+.options button {
+    background: #111111;
+    border-radius: 40px;
+    color: #ffffff;
+    padding: 0.5em 2em;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.options a {
+    color: #999999;
+    font-size: 0.8em;
+    margin-left: 1em;
+    font-weight: 600;
+}
+
